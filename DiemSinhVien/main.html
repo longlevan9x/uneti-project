@@ -1,0 +1,53 @@
+<script type='text/javascript'>
+	$(document).ready(function (){
+		$('#inputSearchButton').click(function () {
+			var keySearch = $('#inputSearchText').val();
+			if(keySearch != ''){
+				$('#main').hide();
+				$('#searchhead').show();
+				$('#inputSearchText2').focus();
+				$('#inputSearchText2').val(keySearch);
+				search(keySearch);
+			}
+			else
+				alert('Key is empty');
+			return false;
+		});
+	});
+	
+	function search(key){
+		$.ajax({
+			// url , type , data, success
+			url  : 'search.php',
+			type : "GET",
+			data : {key : key},
+			success : function(response) {
+				var obj = $.parseJSON(response); // ep kieu chuoi json ve thanh doi thuong
+				if (obj.result == "fail") {
+					alert(obj.message);
+				}
+				else if(obj.result == "success") {
+					$('#answer').html(obj.message);
+					$('#numCount').html(obj.numCount);
+					$('title').html(key+' - TRA CỨU THÔNG TIN SINH VIÊN');
+				}
+				else {
+					return false;
+				}
+			}
+		});
+	}
+</script>
+
+<main>	
+	<div id='main'>
+		<div id='logo'><img src='./images/logo.png' width='' height='100px' /> TRA CỨU THÔNG TIN SINH VIÊN</div>
+		<div id='search'>
+			<form id='searchForm' action='' method='post'>
+				<input id="inputSearchText" autofocus="autofocus" type="search" class="searchText"  placeholder="Nhập mã sinh viên, mã lớp hoặc họ tên..."/>
+				<button type="submit" class="buttonSearch" id="inputSearchButton"><i id='iconSearch' class="fa fa-search"></i></button>
+			</form>
+		</div>
+		<div id='messageSearch'></div>
+	</div>
+</main>

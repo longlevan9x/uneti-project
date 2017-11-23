@@ -1,0 +1,167 @@
+/* made by Verdant - ViVuProductions - 0969 80 20 50 - vinhld.it@gmail.com */
+body{
+	font-family:arial;
+	margin:0 auto;
+}
+#header{
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index:9999;
+	background:#fff;
+}
+#partner{
+	padding-right:30px;
+	list-style-type: none;
+	margin-top:0px;
+}
+#partner li{
+	display: inline-block;
+	height:50px;
+	line-height:50px;
+	width:8%;
+	margin-left:-5px
+}
+.linkHeader{
+	color:#75c5f0;
+}
+.linkHeader:hover{
+	color:#fff;
+}
+#partner li:hover{
+	background:#75c5f0;
+	border:solid red;
+	border-width: 0px 0px 3px 0px;
+}
+main{
+	padding-top:15%;
+}
+#messageSearch{
+	color:red;
+}
+#logo{
+	font-size:40px;
+	color:#75c5f0;
+}
+.searchText{
+	height:24px;
+	font-size:15px;
+	width:90%;
+	padding-left:2%;
+	border-width:0px;
+	outline:none;
+}
+#search,#search2{
+	border:1px solid #DDD;
+	width:50%;
+	height:50px;
+	line-height:50px;
+}
+#search{
+	text-align:left;
+	margin:10px auto;
+}
+#search2{
+}
+#searchhead div{
+	float:left;
+	margin-left:3%;
+}
+#searchhead{
+	background:#fff;
+	display:none;
+	width:100%;
+	position: fixed;
+	top:50px;
+	z-index:9999;
+	height:70px;
+}
+.buttonSearch{
+	outline:none;
+	height:24px;
+	width:9%;
+	font-size:15px;
+	border-width:0px;
+	color:gray;
+	background:#fff;
+	cursor:pointer;
+}
+#iconSearch,#iconSearch2{
+	color:#75c5f0;
+	font-weight:normal;
+}
+#answer{
+	color:red;
+	width:60%;
+	margin-left:10%;
+}
+.linkListStudents:hover .thongtinsinhvien{
+	border-color:red;
+	border-width: 0px 0px 2px 0px;
+	background:#75c5f0;
+}
+.thongtinsinhvien{
+	line-height:40px;
+	border:solid #75c5f0;
+	border-width: 0px 0px 1px 0px;
+}
+.stt{
+	width:5%;
+}
+#numCount{
+	line-height:40px;
+	margin-top:-50px;
+	margin-left:10%;
+}
+.stt,.masinhvien,#partner li,#main{
+	text-align:center;
+}
+.masinhvien{
+	width:20%;
+}
+.hoten{
+	width:30%;
+	font-weight:bold;
+}
+.thongtinsinhvien div{
+	display:inline-block;
+	line-height:40px;
+}
+.linkListStudents:hover{
+	color:#fff;
+}
+.linkListStudents{
+	color:#75c5f0;
+	font-size:16px;
+}
+footer {
+	background: #f2f2f2;
+	color: gray;
+	height: 50px;
+	line-height: 50px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index:999999999;
+}
+#footer{
+	font-size:12px;
+	text-align:right;
+	margin-right:5%;
+}
+.link_info,.linkHeader{
+	text-decoration: none;
+}
+.link_info{
+	color: gray;
+}
+.link_info:hover{
+	text-decoration: underline;
+	color: #75c5f0;
+	cursor:pointer;
+}
